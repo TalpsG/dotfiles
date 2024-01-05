@@ -1,0 +1,16 @@
+bind-key c new-window -c "#{pane_current_path}"
+bind-key % split-window -h -c "#{pane_current_path}"
+bind-key '"' split-window -c "#{pane_current_path}"
+set -g default-shell /bin/bash
+# Display color
+set -g default-terminal "screen-256color"
+#below reset tmux prefix command key
+set -g prefix C-x
+unbind C-b
+bind C-x send-prefix
+#set swap pane key
+bind-key k select-pane -U
+bind-key j select-pane -D
+bind-key h select-pane -L
+bind-key l select-pane -R
+set -g mouse on
